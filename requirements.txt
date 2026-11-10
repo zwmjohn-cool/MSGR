@@ -1,0 +1,7 @@
+# Python >= 3.11. Install a PyTorch build appropriate for your CPU or CUDA device.
+torch>=2.4
+numpy>=1.24
+scipy>=1.10
+nibabel>=5.0
+einops>=0.6
+omegaconf>=2.3

@@ -1,0 +1,50 @@
+{
+  "model": {
+    "input_channels": 22,
+    "latent_channels": 8,
+    "downsample_factor": 4,
+    "base_channels": 64,
+    "num_res_blocks": 2,
+    "padded_shape": [
+      160,
+      176
+    ],
+    "sdpa_attention": true
+  },
+  "loss": {
+    "reconstruction_weight": 1.0,
+    "image_weight": 1.0,
+    "background_weight": 0.1,
+    "kl_weight": 0.0001,
+    "adversarial_weight": 0.01,
+    "discriminator_start": 500,
+    "discriminator_ramp": 1000,
+    "discriminator_channels": 32,
+    "discriminator_layers": 3
+  },
+  "batch_size": 64,
+  "queries_per_sample": 12,
+  "workers": 8,
+  "prefetch_factor": 2,
+  "multiprocessing_context": "spawn",
+  "max_open_shards": 16,
+  "pin_memory": true,
+  "learning_rate": 0.0001,
+  "discriminator_learning_rate": 0.0001,
+  "gradient_clip": 1.0,
+  "mixed_precision": true,
+  "ema_decay": 0.999,
+  "max_epochs": 100,
+  "max_hours": 72,
+  "monitor_every": 1000,
+  "checkpoint_every": 1000,
+  "monitor_subjects": 20,
+  "expected_train_subjects": 800,
+  "initial_evaluation": true,
+  "export_latents": true,
+  "export_split": "all",
+  "export_weights": "ema",
+  "device": "cuda:0",
+  "seed": 20261028,
+  "cpu_threads": 4
+}
