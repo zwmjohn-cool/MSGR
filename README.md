@@ -1,4 +1,4 @@
-# GGF
+# MSGR
 
 Method implementation of **Multi-Shell Gaussian Representation for MRI-to-DWI Synthesis and Angular Super-Resolution**.
 
@@ -31,8 +31,8 @@ The VAE rendered loss uses target-brain RMS scaling, brain MSE, and `0.1 × back
 Use Python 3.11 or newer. Training requires a CUDA-enabled PyTorch installation; install the PyTorch build suitable for your device before installing the remaining requirements. The training entry points use Unix file locking.
 
 ```bash
-git clone https://github.com/zwmjohn-cool/GGF.git
-cd GGF
+git clone https://github.com/zwmjohn-cool/MSGR.git
+cd MSGR
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
